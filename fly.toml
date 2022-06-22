@@ -12,7 +12,9 @@ processes = []
   auto_rollback = true
 
 [build]
-  image = "flyio/hellofly:latest"
+  builder = "paketobuildpacks/builder:base"
+  buildpacks = ["gcr.io/paketo-buildpacks/go"]
+
 
 
 [[services]]
